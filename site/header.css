@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+
+}
+/* Começo do header */
+.header {
+    width: 100%;
+    height: 125px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+}
+
+.header img {
+    margin-top: 2%;
+    width: 13%;
+    height: 13%;
+}
+
+.container {
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+}
+
+.navBar {
+    list-style: none;
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4%;
+    margin-left: 30%;    
+}
+
+.header .botoes {
+    width: 35%;
+    display: flex;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    justify-content: space-around;
+}
+
+#botaoLogin {
+    width: 40%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    border-radius: 50px;
+    border: 0;
+    background-color: #6A6A6A;
+    color: #fff;
+    margin-left: 10%;
+}
+
+#botaoCadastro {
+    width: 40%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    border-radius: 50px;
+    border: 0;
+    background-color: #151515;
+    color: #fff;
+
+
+}
+/* Fim do header */
