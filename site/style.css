@@ -16,7 +16,7 @@ p {
     width: 55%;
     /* height: 100%; */
     margin-left: 10%;
-    margin-top: 10%;
+    margin-top: 15%;
 }
 .descricao .titulo {
     font-family: 'Great Vibes', cursive;
@@ -144,12 +144,13 @@ p {
 
 .diferencas h2 {
     margin-left: 3%;
+    z-index: -1;
     font-family: 'Great Vibes', cursive;
     font-weight: 100;
     letter-spacing: 3px;
     font-size: 70px;
     position: absolute; 
-    margin-top: 8%;
+    margin-top: 10%;
 }
 
 .diferencas img {
