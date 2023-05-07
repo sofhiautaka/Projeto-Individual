@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+
+* {
+    overflow-x: hidden;
+}
 p {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
@@ -80,40 +84,104 @@ p {
 .tipos img {
     position: absolute;
     z-index: -100;
-    gap: 10%;
 }
 
 .text {
     display: flex;
 }
+
 .banner1 p {
     padding-bottom: 4%;
     margin-top: 1%;
 }
-.banner2 img {
+
+.banner2 img, .banner4 img, .banner6 img {
     margin-left: 33%;
 }
+
 .banner2 .text {
     margin-left: 37%;
 }
+
 .banner2 h3 {
     width: 30%;
     padding-top: 3.5%;
 }
+
 .banner2 span {
     font-family: 'Dancing Script', cursive;
     font-weight: 100;
 }
+
 .banner2 p {
     width: 75%;
     margin-left: 0;
     margin-right: 7%;
     padding-bottom: 8%;
 }
+
 .banner3 h3 {
     margin-top: 0.5%;
 }
+
 .banner3 p {
     margin-top: 1.5%;
 }
 /* Fim da página com os tipos de lettering */
+
+
+/* Início da página de diferenças */
+.fundo {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+}
+
+.diferencas {
+    color: #fff;
+    margin-top: 10%;
+}
+
+.diferencas h2 {
+    margin-left: 3%;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: 70px;
+    position: absolute; 
+    margin-top: 8%;
+}
+
+.diferencas img {
+    padding-top: 4%;
+}
+
+.banner4 {
+    margin-top: 5%;
+}
+/* Fim da página de diferenças */
+
+
+/* Início da página de surgimento */
+.surgimento {
+    width: 100%;
+    height: 80vh;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.surgimento h2 {
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 3px;
+    font-size: 70px;
+    font-weight: 100;
+    margin: 0;
+}
+.surgimento p {
+    width: 80%;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+/* Fim da página de surgimento */
+
