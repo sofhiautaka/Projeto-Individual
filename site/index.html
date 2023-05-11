@@ -84,6 +84,84 @@
 
             Desse modo, podemos considerar que ele acabou surgindo quando as pessoas começaram a valorizar mais os trabalhos realizados à mão. Transmitindo, assim, um caráter e um sentimento mais humanizado para as pessoas. Portanto, <b>a “imperfeição” dessa prática passou a ser cada vez mais procurada,</b> pois é considerada uma arte mais espontânea.</p>
         </div>
+        <div class="beneficios">
+            <img src="img/fundoPreto.png" alt="fundo" class="fundo">
+            <h2>Benefícios</h2>
+            <div class="conteudo">
+                <div class="caixa">
+                   <div id="tela1" style="display: block;">
+                        <h3>Aumento da<br> criatividade</h3>
+                        <div class="botao">
+                            <button onclick="criatividade()">+</button>
+                        </div>
+                   </div>
+                   <div id="tela2"style="display: none;">
+                        <p>A técnica oferece uma enorme oportunidade para desenvolver a critividade e a imaginação. Além do mais, é uma forma de se expressar, então, as pessoas podem usar esse método para comunicarem suas emoções e sentimentos.</p>
+                        <button onclick="voltarCriatividade()">-</button>
+                   </div>
+                   
+                </div>
+                <div class="caixa">
+                    <div id="tela3">
+                        <h3>Maior<br> concentração</h3>
+                        <div class="botao">
+                            <button onclick="concentracao()">+</button>
+                        </div>
+                    </div>
+                    <div id="tela4" style="display: none;">
+                        <p>Como o lettering é considerado algo ‘complexo’, isso exige concentração, tempo e treino. Assim, estimulando a escolha de cores, jeitos e maneiras de fazer a arte, os materiais etc, focando em uma atividade.</p>
+                        <button onclick="voltarConcentracao()">-</button>
+                    </div>
+                </div>
+                <div class="caixa">
+                    <div id="tela5">
+                        <h3>Melhora o <br> raciocínio lógico</h3>
+                        <div class="botao">
+                            <button onclick="melhora()">+</button>
+                        </div>
+                    </div>
+                    <div id="tela6"  style="display: none;">
+                        <p>De certa forma, o raciocínio lógico é ligado à concentração. Dessa maneira, manter o foco nessa técnica, em longo prazo, acaba facilitando o desenvolvimento de outras atividades, como memorização e cálculos matemáticos.</p>
+                        <button onclick="voltarMelhora()">-</button>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                Clique em ‘+’ para saber mais informações sobre o benefício.
+            </div>
+        </div>
     </body>
 
 </html>
+
+<script>
+    function criatividade() {
+        tela1.style.display = 'none';
+        tela2.style.display = 'block';
+    }
+
+    function voltarCriatividade() {
+        tela1.style.display = 'block';
+        tela2.style.display = 'none';
+    }
+
+    function concentracao() {
+        tela3.style.display = 'none';
+        tela4.style.display = 'block';
+    }
+
+    function voltarConcentracao() {
+        tela3.style.display = 'block';
+        tela4.style.display = 'none';
+    }
+
+    function melhora() {
+        tela5.style.display = 'none';
+        tela6.style.display = 'block';
+    }
+
+    function voltarMelhora() {
+        tela5.style.display = 'block';
+        tela6.style.display = 'none';
+    }
+</script>
