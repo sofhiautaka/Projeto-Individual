@@ -233,10 +233,22 @@ p {
     border: none;
     font-size: 30px;
     margin-left: 80%;
-    margin-top: 30%;
+    margin-top: 31%;
 }
 
 #tela2 {
+    padding-left: 8%;
+    padding-right: 8%;
+    margin-top: 15%;
+}
+
+#tela4 {
+    padding-left: 8%;
+    padding-right: 8%;
+    margin-top: 23%;
+}
+
+#tela6 {
     padding-left: 8%;
     padding-right: 8%;
     margin-top: 15%;
@@ -255,19 +267,7 @@ p {
     border: none;
     font-size: 35px;
     margin-left: 88%;
-    margin-bottom: 5%;
-}
-
-#tela4 {
-    padding-left: 8%;
-    padding-right: 8%;
-    margin-top: 24%;
-}
-
-#tela6 {
-    padding-left: 8%;
-    padding-right: 8%;
-    margin-top: 15%;
+    margin-top: 3%;
 }
 
 #tela6 button {
@@ -275,6 +275,7 @@ p {
     border: none;
     font-size: 35px;
     margin-left: 88%;
+    margin-top: 3%;
 }
 
 .info {
@@ -286,3 +287,74 @@ p {
 }
 /* Fim da página de benefícios */
 
+/* Início da página de materiais */
+.materiais {
+    width: 90%;
+}
+
+.materiais h2 {
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 3px;
+    color: #151515;
+    font-size: 70px;
+    font-weight: 100;
+    margin: 0;
+    margin-top: 15%;
+}
+
+.materiais .conteudo {
+    margin-left: 11%;
+}
+
+.materiais p {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.materiais .caixas {
+    margin-left: 11%;
+}
+
+.materiais details {
+    width: 100%;
+    color: #fff;
+    background-color: #525252;
+    font-size: 25px;
+    margin-top: 3%;
+    border-radius: 5px;
+}
+
+.materiais summary {
+    font-family: 'Roboto', sans-serif;
+    padding: 1%;
+    margin-left: 2%;
+}
+
+/* summary {
+    list-style: none;
+} */
+
+.caixas img{
+    margin-left: 2%;
+    width: 30px;
+    height: 30px;
+    margin-top: 1.3%;
+}
+
+.conclusao p {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 6%;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.caixinha {
+    display: flex;
+}
+
+.caixinha p {
+    margin-left: 0.5%;
+    font-size: 20px;
+}
+/* Fim da página de materiais */
