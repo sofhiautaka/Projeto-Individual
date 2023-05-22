@@ -17,13 +17,13 @@
             <div class="container">
                 <a href="index.html"><img src="img/Logo e nome.png" alt="Logo"></a>
                 <ul class="navBar">
-                    <li><a href=""></a>Sobre Nós</li>
+                    <li><a href="">Sobre Mim</a></li>
                     <li><a href="simulacao.html">Simulação</a></li>
                     <li><a href="">FAQs</a></li>
                 </ul>
                 <div class="botoes">
-                    <button id="botaoLogin">Login</button>
-                    <button id="botaoCadastro">Cadastre-se</button>
+                    <button id="botaoLogin" onclick="login()">Login</button>
+                    <button id="botaoCadastro" onclick="cadastro()">Cadastre-se</button>
                 </div>
             </div>
         </div>
@@ -228,6 +228,13 @@
         tela6.style.display = 'none';
     }
 
+    function login() {
+        window.location.href = "login.html";
+    }
+
+    function cadastro() {
+        window.location.href = "cadastro.html";
+    }
 
 
 </script>

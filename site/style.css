@@ -7,6 +7,11 @@
 * {
     overflow-x: hidden;
 }
+
+button {
+    cursor: pointer;
+}
+
 p {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
@@ -191,6 +196,7 @@ p {
 .beneficios {
     width: 100%;
     height: 80vh;
+    overflow-y: hidden;
 }
 
 .beneficios img {
@@ -217,6 +223,8 @@ p {
     border-radius: 20px;
     background-color: #f0f0f0;
     box-shadow: rgb(255, 255, 255, 0.5) 5px 0 5px;
+    overflow-y: hidden;
+
 }
 
 .beneficios h3 {
