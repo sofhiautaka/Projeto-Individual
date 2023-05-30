@@ -15,7 +15,7 @@
         <div class="container">
             <a href="index.html"><img src="img/Logo e nome.png" alt="Logo"></a>
             <ul class="navBar">
-                <li><a href="">Sobre Mim</a></li>
+                <li><a href="index.html#sobreMim">Sobre Mim</a></li>
                 <li><a href="simulacao.html">Simulação</a></li>
                 <li><a href="">FAQs</a></li>
             </ul>
@@ -31,13 +31,13 @@
                 <h3 style="margin-left: 48.6%;">CADASTRO</h3>
             </div>
             <div class="camposCadastro">
-            <input id="nome" placeholder="nome de usuário">
+            <input id="nome" placeholder="nome">
             <input id="email" placeholder="e-mail">
             <input type="password" id="senha" placeholder="senha">
             <input type="password" id="confirmacaoSenha" placeholder="confirmação de senha">
         </div>
             <a href="cadastro.html" style="margin-top: 35.1%;">Já possuo uma conta</a>
-            <button onclick="entrar()" style="margin-top: 35%; z-index: 1;">Entrar</button>
+            <button onclick="cadastrar()" style="margin-top: 35%; z-index: 1;">Cadastrar</button>
         <div class="imagem">
             <img src="img/caixaLoginCadastro.png" alt="Login">
         </div>
@@ -77,5 +77,9 @@
 
     function cadastro() {
         window.location.href = "cadastro.html";
+    }
+
+    function cadastrar() {
+        window.location.href = "login.html";
     }
 </script>

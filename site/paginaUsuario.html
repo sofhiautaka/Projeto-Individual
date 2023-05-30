@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unique Style</title>
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="paginaUsuario.css">
+        <link rel="stylesheet" href="footer.css">
+    </head>
+
+    <body>
+        <div class="header" style="z-index: 100; overflow-y: hidden; border-bottom: 1px solid rgb(161, 161, 161, 0.5); box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.25);">
+            <div class="container">
+                <a href="paginaUsuario.html"><img style="width: 90%; height: 54%;" src="img/Logo e nome.png" alt="Logo"></a>
+                <div class="perfil">
+                    <div class="boasVindas">
+                        <p>Olá, Sofhia!</p>
+                        <a href="index.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pedido">
+            <a href="https://wa.me/11982781626"><button onclick="faca()">Faça um pedido personalizado</button></a>
+        </div>
+        <div class="conteudo">
+            <div class="fileira">
+                <div class="post" id="post1">
+                    <div class="imagem">
+                        <img src="img/post01.jpeg" alt="Caderno">
+                    </div>
+                    <div class="flex">
+                        <p>Post 01</p>
+                        <div class="botao">
+                            <button onclick="like1()" >Curtir
+                                    <div id="numero" >0</div>
+                                    <div id="coracao" style="display: block;">
+                                        <img  src="img/silhueta-de-formato-simples-de-coracao.png" alt="coracao">
+                                    </div>
+                                    <div id="coracaoRosa" style="display: none;">
+                                        <img src="img/silhueta-de-formato-simples-de-coracao (1).png" alt="coracao">
+                                    </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="post" id="post2">
+                    <div class="imagem">
+                        <img src="img/post02.jpeg" alt="Sacola">
+                    </div>
+                    <div class="flex">
+                        <p>Post 02</p>
+                        <div class="botao">
+                            <button onclick="like2()" >Curtir
+                                    <div id="numero2" >0</div>
+                                    <div id="coracao2" style="display: block;">
+                                        <img  src="img/silhueta-de-formato-simples-de-coracao.png" alt="coracao">
+                                    </div>
+                                    <div id="coracaoRosa2" style="display: none;">
+                                        <img src="img/silhueta-de-formato-simples-de-coracao (1).png" alt="coracao">
+                                    </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="post" id="post3">
+                    <div class="imagem">
+                        <img src="img/post03.jpeg" alt="Frase">
+                    </div>
+                    <div class="flex">
+                        <p>Post 03</p>
+                        <div class="botao">
+                            <button onclick="like3()" >Curtir
+                                    <div id="numero3" >0</div>
+                                    <div id="coracao3" style="display: block;">
+                                        <img  src="img/silhueta-de-formato-simples-de-coracao.png" alt="coracao">
+                                    </div>
+                                    <div id="coracaoRosa3" style="display: none;">
+                                        <img src="img/silhueta-de-formato-simples-de-coracao (1).png" alt="coracao">
+                                    </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fileira">
+                <div class="post" id="post4">
+                    <div class="imagem">
+                        <img src="img/post04.jpeg" alt="Frase">
+                    </div>
+                    <div class="flex">
+                        <p>Post 04</p>
+                        <div class="botao">
+                            <button onclick="like4()" >Curtir
+                                    <div id="numero4" >0</div>
+                                    <div id="coracao4" style="display: block;">
+                                        <img  src="img/silhueta-de-formato-simples-de-coracao.png" alt="coracao">
+                                    </div>
+                                    <div id="coracaoRosa4" style="display: none;">
+                                        <img src="img/silhueta-de-formato-simples-de-coracao (1).png" alt="coracao">
+                                    </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="post" id="post5">
+                    <div class="imagem">
+                        <img src="img/post05.jpeg" alt="Título">
+                    </div>
+                    <div class="flex">
+                        <p>Post 05</p>
+                        <div class="botao">
+                            <button onclick="like5()" >Curtir
+                                    <div id="numero5" >0</div>
+                                    <div id="coracao5" style="display: block;">
+                                        <img  src="img/silhueta-de-formato-simples-de-coracao.png" alt="coracao">
+                                    </div>
+                                    <div id="coracaoRosa5" style="display: none;">
+                                        <img src="img/silhueta-de-formato-simples-de-coracao (1).png" alt="coracao">
+                                    </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="post" id="post6">
+                    <div class="imagem">
+                        <img src="img/post06.jpeg" alt="Caixa">
+                    </div>
+                    <div class="flex">
+                        <p>Post 06</p>
+                        <div class="botao">
+                            <button onclick="like6()" >Curtir
+                                    <div id="numero6" >0</div>
+                                    <div id="coracao6" style="display: block;">
+                                        <img  src="img/silhueta-de-formato-simples-de-coracao.png" alt="coracao">
+                                    </div>
+                                    <div id="coracaoRosa6" style="display: none;">
+                                        <img src="img/silhueta-de-formato-simples-de-coracao (1).png" alt="coracao">
+                                    </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fileira">
+                <div class="post" id="post7">
+                    <div class="imagem">
+                        <img src="img/post07.jpeg" alt="Frase">
+                    </div>
+                    <div class="flex">
+                        <p>Post 07</p>
+                        <div class="botao">
+                            <button onclick="like7()" >Curtir
+                                    <div id="numero7" >0</div>
+                                    <div id="coracao7" style="display: block;">
+                                        <img  src="img/silhueta-de-formato-simples-de-coracao.png" alt="coracao">
+                                    </div>
+                                    <div id="coracaoRosa7" style="display: none;">
+                                        <img src="img/silhueta-de-formato-simples-de-coracao (1).png" alt="coracao">
+                                    </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="post" id="post8">
+                    <div class="imagem">
+                        <img src="img/post08.jpeg" alt="Lousa">
+                    </div>
+                    <div class="flex">
+                        <p>Post 08</p>
+                        <div class="botao">
+                            <button onclick="like8()" >Curtir
+                                    <div id="numero8" >0</div>
+                                    <div id="coracao8" style="display: block;">
+                                        <img  src="img/silhueta-de-formato-simples-de-coracao.png" alt="coracao">
+                                    </div>
+                                    <div id="coracaoRosa8" style="display: none;">
+                                        <img src="img/silhueta-de-formato-simples-de-coracao (1).png" alt="coracao">
+                                    </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="post" id="post9">
+                    <div class="imagem">
+                        <img src="img/post09.jpeg" alt="Banner">
+                    </div>
+                    <div class="flex">
+                        <p>Post 09</p>
+                        <div class="botao">
+                            <button onclick="like9()" >Curtir
+                                    <div id="numero9" >0</div>
+                                    <div id="coracao9" style="display: block;">
+                                        <img  src="img/silhueta-de-formato-simples-de-coracao.png" alt="coracao">
+                                    </div>
+                                    <div id="coracaoRosa9" style="display: none;">
+                                        <img src="img/silhueta-de-formato-simples-de-coracao (1).png" alt="coracao">
+                                    </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footerConteudo">
+                <ul class="marca">
+                    <li><img src="img/logoUS.png" alt="Logo"></li>
+                    <li>
+                        <p>© Copyright, todos os direitos reservados</p>
+                    </li>
+                </ul>
+                <ul class="contato">
+                    <li><i>E-mail</i></li>
+                    <li>
+                        <p>sofhiautaka@gmail.com</p>
+                    </li>
+                </ul>
+                <ul class="cards">
+                    <li><img src="img/whats.png" alt="WhatsApp"></li>
+                    <li><img src="img/insta.png" alt="Instagram"></li>
+                    <li><img src="img/linkedin.png" alt="Linkedin"></li>
+                </ul>
+                <ul class="links">
+                    <li>Sobre Nós</li>
+                    <li>Simulação</li>
+                    <li>FAQs</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+
+</html>
+
+<script>
+    var click = 0;
+    var click2 = 0;
+    var click3 = 0;
+    var click4 = 0;
+    var click5 = 0;
+    var click6 = 0;
+    var click7 = 0;
+    var click8 = 0;
+    var click9 = 0;
+    function like1() {
+        click++;
+        numero.innerHTML = click;
+        coracao.style.display = 'none';
+        coracaoRosa.style.display = 'block'; 
+
+        if (click > 1) {
+            click = 0
+            numero.innerHTML = 0;
+            coracao.style.display = 'block';
+            coracaoRosa.style.display = 'none'; 
+        }
+    }
+    function like2() {
+        click2++;
+        numero2.innerHTML = click2;
+        coracao2.style.display = 'none';
+        coracaoRosa2.style.display = 'block'; 
+
+        if (click2 > 1) {
+            numero2.innerHTML = 0;
+            click2 = 0
+            coracao2.style.display = 'block';
+            coracaoRosa2.style.display = 'none'; 
+        }
+    }
+    function like3() {
+        click3++;
+        numero3.innerHTML = click3;
+        coracao3.style.display = 'none';
+        coracaoRosa3.style.display = 'block'; 
+
+        if (click3 > 1) {
+            numero3.innerHTML = 0;
+            click3 = 0
+            coracao3.style.display = 'block';
+            coracaoRosa3.style.display = 'none'; 
+        }
+    }
+    function like4() {
+        click4++;
+        numero4.innerHTML = click4;
+        coracao4.style.display = 'none';
+        coracaoRosa4.style.display = 'block'; 
+
+        if (click4 > 1) {
+            numero4.innerHTML = 0;
+            click4 = 0
+            coracao4.style.display = 'block';
+            coracaoRosa4.style.display = 'none'; 
+        }
+    }
+    function like5() {
+        click5++;
+        numero5.innerHTML = click5;
+        coracao5.style.display = 'none';
+        coracaoRosa5.style.display = 'block'; 
+
+        if (click5 > 1) {
+            numero5.innerHTML = 0;
+            click5 = 0
+            coracao5.style.display = 'block';
+            coracaoRosa5.style.display = 'none'; 
+        }
+    }
+    function like6() {
+        click6++;
+        numero6.innerHTML = click6;
+        coracao6.style.display = 'none';
+        coracaoRosa6.style.display = 'block'; 
+
+        if (click6 > 1) {
+            numero6.innerHTML = 0;
+            click6 = 0
+            coracao6.style.display = 'block';
+            coracaoRosa6.style.display = 'none'; 
+        }
+    }
+    function like7() {
+        click7++;
+        numero7.innerHTML = click7;
+        coracao7.style.display = 'none';
+        coracaoRosa7.style.display = 'block'; 
+
+        if (click7 > 1) {
+            numero7.innerHTML = 0;
+            click7 = 0
+            coracao7.style.display = 'block';
+            coracaoRosa7.style.display = 'none'; 
+        }
+    }
+    function like8() {
+        click8++;
+        numero8.innerHTML = click8;
+        coracao8.style.display = 'none';
+        coracaoRosa8.style.display = 'block'; 
+
+        if (click8 > 1) {
+            numero8.innerHTML = 0;
+            click8 = 0
+            coracao8.style.display = 'block';
+            coracaoRosa8.style.display = 'none'; 
+        }
+    }
+    function like9() {
+        click9++;
+        numero9.innerHTML = click9;
+        coracao9.style.display = 'none';
+        coracaoRosa9.style.display = 'block'; 
+
+        if (click9 > 1) {
+            numero9.innerHTML = 0;
+            click9 = 0
+            coracao9.style.display = 'block';
+            coracaoRosa9.style.display = 'none'; 
+        }
+    }
+    
+</script>

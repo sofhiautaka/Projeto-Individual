@@ -366,4 +366,48 @@ p {
 }
 /* Fim da página de materiais */
 
+/* Início da página sobre mim */
+#sobreMim h2 {
+    margin-top: 10%;
+    font-family: 'Great Vibes', cursive;
+    font-size: 70px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#imgFundo {
+    margin-left: 16%;
+    z-index: -1;
+    margin-bottom: 10%;
+}
+
+#sobreMim .eu {
+    position: absolute;
+    margin-left: 25.3%;
+    padding-bottom: 20%;
+    margin-top: 7.5%;
+}
+
+.eu p {
+    margin-top: 15%;
+    font-family: 'Roboto Mono', monospace;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+.explicacao p {
+    width: 28%;
+    line-height: 40px;
+    font-family: 'Roboto Mono', monospace;
+    color: #ffffffd2;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 3.5%;
+    font-size: 21px;
+    text-align: center;
+    font-weight: 100;
+}
+/* Fim da página sobre mim */
 
