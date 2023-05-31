@@ -1,0 +1,29 @@
+
+
+.faq {
+    width: 100%;
+}
+
+.titulo {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    position: absolute;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.perguntas {
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    margin-top: 18%;
+    flex-direction: column;
+    align-items: center;
+}
+
+details {
+    margin-bottom: 3.5%;
+}
