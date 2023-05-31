@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/testeLike.css">
+</head>
+<body>
+    <div class="botao">
+        <button onclick="like()" >Curtir
+                <div id="numero" >0</div>
+                <div id="coracao" style="display: block;">
+                    <img  src="img/silhueta-de-formato-simples-de-coracao.png" alt="coracao">
+                </div>
+                <div id="coracaoRosa" style="display: none;">
+                    <img src="img/silhueta-de-formato-simples-de-coracao (1).png" alt="coracao">
+                </div>
+        </button>
+    </div>
+</body>
+</html>
+
+<script>
+    var click = 0;
+    function like() {
+        click++;
+        numero.innerHTML = click;
+        coracao.style.display = 'none';
+        coracaoRosa.style.display = 'block'; 
+
+        if (click > 1) {
+            numero.innerHTML = 0;
+            click = 0
+            coracao.style.display = 'block';
+            coracaoRosa.style.display = 'none'; 
+        }
+        
+    }
+</script>

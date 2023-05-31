@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unique Style</title>
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/footer.css">
+
+    </head>
+
+    <body>
+        <div class="header" style="z-index: 100;">
+            <div class="container">
+                <a href="index.html"><img src="img/Logo e nome.png" alt="Logo"></a>
+                <ul class="navBar">
+                    <li><a href="index.html#sobreMim">Sobre Mim</a></li>
+                    <li><a href="simulacao.html">Simulação</a></li>
+                    <li><a href="">FAQs</a></li>
+                </ul>
+                <div class="botoes">
+                    <button id="botaoLogin" onclick="login()">Login</button>
+                    <button id="botaoCadastro" style="background-color: rgb(106, 106, 106, 27%);">Cadastre-se</button>
+                </div>
+            </div>
+        </div>
+        <div class="conteudo">
+            <div class="caixa">
+                <div class="titulo">
+                    <h3 style="margin-left: 48.6%;">CADASTRO</h3>
+                </div>
+                <div class="camposCadastro">
+                    <input id="iptNome" placeholder="nome">
+                    <input id="iptEmail" placeholder="e-mail">
+                    <input type="password" id="iptSenha" placeholder="senha">
+                    <input type="password" id="iptConfirmacaoSenha" placeholder="confirmação de senha">
+                </div>
+                <a href="cadastro.html" style="margin-top: 35.1%;">Já possuo uma conta</a>
+                <button onclick="cadastrar()" style="margin-top: 35%; z-index: 1;">Cadastrar</button>
+                <div class="imagem">
+                    <img src="img/caixaLoginCadastro.png" alt="Login">
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="footerConteudo">
+                <ul class="marca">
+                    <li><img src="img/logoUS.png" alt="Logo"></li>
+                    <li>
+                        <p>© Copyright, todos os direitos reservados</p>
+                    </li>
+                </ul>
+                <ul class="contato">
+                    <li><i>E-mail</i></li>
+                    <li>
+                        <p>sofhiautaka@gmail.com</p>
+                    </li>
+                </ul>
+                <ul class="cards">
+                    <li><img src="img/whats.png" alt="WhatsApp"></li>
+                    <li><img src="img/insta.png" alt="Instagram"></li>
+                    <li><img src="img/linkedin.png" alt="Linkedin"></li>
+                </ul>
+                <ul class="links">
+                    <li>Sobre Nós</li>
+                    <li>Simulação</li>
+                    <li>FAQs</li>
+                </ul>
+            </div>
+        </div>
+
+    </body>
+
+</html>
+
+<script>
+    function login() {
+        window.location.href = "login.html";
+    }
+
+    function cadastro() {
+        window.location.href = "cadastro.html";
+    }
+
+    function cadastrar() {
+        var erro = 0;
+        var nome = iptNome.value;
+        var email = iptEmail.value;
+        var senha = iptSenha.value;
+        var confirmacaoSenha = iptConfirmacaoSenha.value;
+
+        if (nome == '' && email == '' && senha == '' && confirmacaoSenha == '') {
+            alert('Todos os campos devem ser preenchidos.');
+            erro++;
+        } else {
+
+            if (nome.length <= 1) {
+                alert('O nome deve possuir pelo menos 1 caractere');
+                erro++;
+            }
+            if (email.includes('@') && email.includes('.')) {
+            } else {
+                alert('O email deve conter @ e .');
+                erro++;
+            }
+            if (senha.length <= 5) {
+                alert('A senha deve possuir pelo menos 6 caracteres');
+                erro++;
+            }
+            if (senha != confirmacaoSenha) {
+                alert('As senhas não estão iguais!');
+            }
+        }
+
+        //    colocar as verificações, essa parte aq embaixo eh o erro == 0
+        if (erro == 0) {
+            // Enviando o valor da nova input
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    nomeServer: nome,
+                    emailServer: email,
+                    senhaServer: senha
+                })
+            }).then(function (resposta) {
+
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    window.location.href = "login.html";
+
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+            return false;
+        }
+    }
+
+</script>
