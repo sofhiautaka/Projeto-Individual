@@ -17,7 +17,7 @@
                 <a href="paginaUsuario.html"><img style="width: 90%; height: 54%;" src="img/Logo e nome.png" alt="Logo"></a>
                 <div class="perfil">
                     <div class="boasVindas">
-                        <p>Olá, Sofhia!</p>
+                        <p>Olá, <span id="nomeUsuario">usuário</span>!</p>
                         <a href="index.html">Logout</a>
                     </div>
                 </div>
@@ -236,6 +236,10 @@
 </html>
 
 <script>
+    var nomeUser = document.getElementById("nomeUsuario");
+    var nome = sessionStorage.NOME_USUARIO;
+    nomeUser.innerHTML = nome;
+
     var click = 0;
     var click2 = 0;
     var click3 = 0;

@@ -16,7 +16,7 @@
             <a href="index.html"><img src="img/Logo e nome.png" alt="Logo"></a>
             <ul class="navBar">
                 <li><a href="index.html#sobreMim">Sobre Mim</a></li>
-                <li><a href="simulacao.html">Simulação</a></li>
+                <li><a href="index.html#beneficios">Benefícios</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
             <div class="botoes">
@@ -81,15 +81,23 @@
         var erro = 0;
         var email = iptEmail.value;
         var senha = iptSenha.value;
+    
 
         if (email == '' && senha == '') {
             alert('Campos em branco!');
+            erro++;
         } else if (email == '') {
             alert('Preencha o seu email!');
+            erro++;
         } else if (senha == '') {
-            alert('Preencha a sua senha!')
+            alert('Preencha a sua senha!');
+            erro++;
         }
 
+
+        if (erro == 0) {
+            
+        
         console.log("FORM LOGIN: ", email);
         console.log("FORM SENHA: ", senha);
 
@@ -118,9 +126,6 @@
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
 
-                    setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
-                    }, 1000); // apenas para exibir o loading
 
                 });
 
@@ -139,6 +144,7 @@
         })
 
         return false;
+        }
     }
 
 </script>
