@@ -21,3 +21,10 @@ CREATE TABLE Curtida (
     FOREIGN KEY (fkPost) REFERENCES Post(idPost),
     PRIMARY KEY (fkUsuario, fkPost)
 );
+
+CREATE TABLE Simulador (
+	idSimulador INT PRIMARY KEY,
+    texto VARCHAR(60),
+    fkUsuario INT,
+    FOREIGN KEY (fkUsuario) REFERENCES Usuario (id)
+);
