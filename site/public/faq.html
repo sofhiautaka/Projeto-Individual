@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unique Style</title>
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/faq.css">
+    </head>
+
+    <body>
+        <div class="header" style="z-index: 100;">
+            <div class="container">
+                <a href="index.html"><img src="img/Logo e nome.png" alt="Logo"></a>
+                <ul class="navBar">
+                    <li><a href="index.html#sobreMim">Sobre Mim</a></li>
+                    <li><a href="index.html#beneficios">Benefícios</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+                <div class="botoes">
+                    <button id="botaoLogin" onclick="login()">Login</button>
+                    <button id="botaoCadastro" onclick="cadastro()">Cadastre-se</button>
+                </div>
+            </div>
+        </div>
+        <div class="faq">
+
+            <div class="titulo">FAQ</div>
+            <div class="perguntas">
+                    <details>
+                        <summary>Como posso fazer um pedido personalizado com lettering?</summary>
+                        <div class="conteudo">
+                            <p>Faça o seu login - faça o seu cadastro caso não tenha uma conta - ao se logar, irá aparecer o botão para fazer um pedido personalizado direcionando para o nosso WhatsApp!❤️</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>O lettering só pode ser feito com brush pen?</summary>
+                        <div class="conteudo">
+                            <p>Ele pode ser feito com canetas, canetinhas, marcadores etc. Saiba mais sobre os materiais necessários na página inicial do site.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Onde posso ver aplicações do lettering no dia a dia?</summary>
+                        <div class="conteudo">
+                            <p>Faça o seu cadastro no site, após logar a sua conta, aparecerão posts mostrando diversas aplicações do lettering.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Como posso aprender a fazer esse tipo de arte?</summary>
+                        <div class="conteudo">
+                            <p>Pesquise por vídeos no YouTube, e lembre-se que é um processo contínuo de treino. Não desista, quanto mais praticar, melhor ficará!</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Não estou conseguindo fazer o meu login, o que fazer?</summary>
+                        <div class="conteudo">
+                            <p>Você já possui um cadastro? Caso não, crie um e depois entre na sua conta.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Como posso simular uma frase/ palavra em lettering?</summary>
+                        <div class="conteudo">
+                            <p>Vá em 'simulação' aqui no menu do site e aproveite!</p>
+                        </div>
+                    </details>
+                
+            </div>
+        </div>
+    </body>
+
+</html>
+
+<script>
+    function login() {
+        window.location.href = "login.html";
+    }
+
+    function cadastro() {
+        window.location.href = "cadastro.html";
+    }
+</script>
