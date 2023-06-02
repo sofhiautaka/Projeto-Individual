@@ -45,6 +45,10 @@
     font-size: 18px;
 }
 
+#email {
+    cursor: pointer;
+}
+
 .cards {
     display: flex;
     position: absolute;
@@ -63,4 +67,10 @@
 
 .links li {
     margin-bottom: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    
 }

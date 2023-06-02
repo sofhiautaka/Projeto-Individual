@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="img/logoUS.png">
+
 
 </head>
 <body>
@@ -18,6 +20,7 @@
                 <li><a href="index.html#sobreMim">Sobre Mim</a></li>
                 <li><a href="index.html#beneficios">Benefícios</a></li>
                 <li><a href="faq.html">FAQ</a></li>
+                
             </ul>
             <div class="botoes">
                 <button style="background-color: rgb(106, 106, 106, 27%);" id="botaoLogin" onclick="login()">Login</button>
@@ -50,17 +53,17 @@
             </ul>
             <ul class="contato">
                 <li><i>E-mail</i></li>
-                <li><p>sofhiautaka@gmail.com</p></li>
+                <li><p id="email" onclick="copiarEmail()">sofhiautaka@gmail.com</p></li>
             </ul>
             <ul class="cards">
-                <li><img src="img/whats.png" alt="WhatsApp"></li>
-                <li><img src="img/insta.png" alt="Instagram"></li>
-                <li><img src="img/linkedin.png" alt="Linkedin"></li>
+                <a href="https://wa.me/11982781626"><li><img src="img/whats.png" alt="WhatsApp"></li></a>
+                <a href=""><li><img src="img/insta.png" alt="Instagram"></li></a>
+                <a href=""><li><img src="img/linkedin.png" alt="Linkedin"></li></a>
             </ul>
             <ul class="links">
-                <li>Sobre Nós</li>
-                <li>Simulação</li>
-                <li>FAQs</li>
+                <a href="#sobreMim"><li>Sobre Mim</li></a>
+                <a href="#beneficios"><li>Benefícios</li></a>
+                <a href="faq.html"><li>FAQ</li></a>
             </ul>
         </div>
     </div>
@@ -145,6 +148,13 @@
 
         return false;
         }
+    }
+
+    function copiarEmail(){
+        navigator.clipboard.writeText( "sofhiautaka@gmail.com")
+        .then(() => {
+        alert("O email foi copiado para sua área de transferência!");
+      })
     }
 
 </script>
