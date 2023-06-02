@@ -59,42 +59,42 @@
         var idUsuario = sessionStorage.ID_USUARIO;
 
 
-        fetch(`/simulacao/simular/${idUsuario}`, {
-            method: "post",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                nomeServer: nome,
-                emailServer: email,
-                senhaServer: senha,
-                txtServer: txt,
-            })
-        }).then(function (resposta) {
+        fetch("/usuarios/simular", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    txtServer: txt,
+                    idServer: idUsuario
+                })
+            }).then(function (resposta) {
 
-            console.log("resposta: ", resposta);
+                console.log("resposta: ", resposta);
 
-            if (resposta.ok) {
-                if (txt.length > 20) {
+                if (resposta.ok) {
+                    if (txt.length > 20) {
             lettering.innerHTML = '<p style="margin-top: 20%; color: #151515;"> ' + txt + '</p>' 
             } else if (txt.length <= 10) {
             lettering.innerHTML = '<p style="margin-top: 45%; color: #151515;">' + txt + '</p>' 
             } else if (txt.length > 10){
             lettering.innerHTML = '<p style="margin-top: 45%; color: #151515;"> ' + txt + '</p>'
             }
-            } else if (resposta.status == 404) {
-                window.alert("Deu 404!");
-            } else {
-                throw ("Houve um erro ao tentar realizar a simuação!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
-        });
 
-        return false;
-        txtArea.value = '';
-    }
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+            return false;
+        }
+    
+            
+        
 
     function login() {
         window.location.href = "login.html";

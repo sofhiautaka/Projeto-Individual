@@ -1,88 +1,46 @@
 var simulacaoModel = require("../models/simulacaoModel");
 
+var sessoes = [];
+
 function testar(req, res) {
-    console.log("ENTRAMOS NO simulacaoController");
-    res.send("ENTRAMOS NO SIMULAÇÃO CONTROLLER");
+    console.log("ENTRAMOS NA simulacaoController");
+    res.json("ESTAMOS FUNCIONANDO!");
 }
 
-function listar(req, res) {
-    simulacaoModel.listar().then(function (resultado) {
-        if (resultado.length > 0) {
-            res.status(200).json(resultado);
-        } else {
-            res.status(204).send("Nenhum resultado encontrado!")
-        }
-    }).catch(function (erro) {
-        console.log(erro);
-        console.log("Houve um erro ao buscar o texto: ", erro.sqlMessage);
-        res.status(500).json(erro.sqlMessage);
-    });
-}
-
-// function listarPorUsuario(req, res) {
-//     var idUsuario = req.params.idUsuario;
-
-//     avisoModel.listarPorUsuario(idUsuario)
-//         .then(
-//             function (resultado) {
-//                 if (resultado.length > 0) {
-//                     res.status(200).json(resultado);
-//                 } else {
-//                     res.status(204).send("Nenhum resultado encontrado!");
-//                 }
-//             }
-//         )
-//         .catch(
-//             function (erro) {
-//                 console.log(erro);
-//                 console.log(
-//                     "Houve um erro ao buscar os avisos: ",
-//                     erro.sqlMessage
-//                 );
-//                 res.status(500).json(erro.sqlMessage);
-//             }
-//         );
-// }
-
-// function pesquisarTexto(req, res) {
-//     var texto = req.params.texto;
-
-//     avisoModel.pesquisarTexto(texto)
-//         .then(
-//             function (resultado) {
-//                 if (resultado.length > 0) {
-//                     res.status(200).json(resultado);
-//                 } else {
-//                     res.status(204).send("Nenhum resultado encontrado!");
-//                 }
-//             }
-//         ).catch(
-//             function (erro) {
-//                 console.log(erro);
-//                 console.log("Houve um erro ao buscar os avisos: ", erro.sqlMessage);
-//                 res.status(500).json(erro.sqlMessage);
-//             }
-//         );
-// }
 
 function simular(req, res) {
-    simulacaoModel.simular().then(function (resultado) {
-        if (resultado.length > 0) {
-            res.status(200).json(resultado);
-        } else {
-            res.status(204).send("Nenhum resultado encontrado!")
-        }
-    }).catch(function (erro) {
-        console.log(erro);
-        console.log("Houve um erro ao buscar o texto: ", erro.sqlMessage);
-        res.status(500).json(erro.sqlMessage);
-    });
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var txt = req.body.txtServer;
+    var idUsuario = req.body.idServer;
+    
+
+    // Faça as validações dos valores
+    if (txt == undefined) {
+        res.status(400).send("Seu texto está undefined!");
+    } else if (idUsuario == undefined) {
+        res.status(400).send("Seu idUsuario está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo simulacaoModel.js
+        simulacaoModel.cadastrar(txt, idUsuario)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
 }
 
 module.exports = {
-    testar,
-    listar,
-    // listarPorUsuario,
-    // pesquisarTexto,
-    simular
+    simular,
+    testar
 }
