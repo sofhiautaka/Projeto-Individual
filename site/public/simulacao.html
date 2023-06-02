@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unique Style</title>
     <link rel="icon" href="img/logoUS.png">
     <link rel="stylesheet" href="css/header.css">
@@ -59,7 +58,7 @@
         var idUsuario = sessionStorage.ID_USUARIO;
 
 
-        fetch("/usuarios/simular", {
+        fetch("/simulacao/simular", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -84,7 +83,7 @@
             }
 
                 } else {
-                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                    throw ("Houve um erro ao tentar realizar a simulação!");
                 }
             }).catch(function (resposta) {
                 console.log(`#ERRO: ${resposta}`);
@@ -93,14 +92,4 @@
             return false;
         }
     
-            
-        
-
-    function login() {
-        window.location.href = "login.html";
-    }
-
-    function cadastro() {
-        window.location.href = "cadastro.html";
-    }
 </script>
