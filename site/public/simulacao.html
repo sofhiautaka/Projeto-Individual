@@ -13,18 +13,19 @@
 </head>
 
 <body>
-    <div class="header" style="z-index: 100;">
+    <div class="header" style="z-index: 100;border-bottom: 1px solid rgb(161, 161, 161, 0.5); box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.25);">
         <div class="container">
-            <a href="index.html"><img src="img/Logo e nome.png" alt="Logo"></a>
-            <ul class="navBar">
-                <li><a href="index.html#sobreMim">Sobre Mim</a></li>
-                <li><a href="simulacao.html">Simulação</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-            <div class="botoes">
-                <button id="botaoLogin" onclick="login()">Login</button>
-                <button id="botaoCadastro" onclick="cadastro()">Cadastre-se</button>
-            </div>
+            <a href="index.html"><img src="img/Logo e nome.png" alt="Logo" style="width: 83%; height: 52.8%; margin-top: 17%;"></a>
+                <ul class="navBarUsuario">
+                    <li><a href="simulacao.html">Questionário</a></li>
+                    <li><a href="simulacao.html">Simulação</a></li>
+                </ul>
+                <div class="perfil">
+                    <div class="boasVindas">
+                        <p>Olá, <span id="nomeUsuario">usuário</span>!</p>
+                        <a href="index.html">Logout</a>
+                    </div>
+                </div>
         </div>
     </div>
     <div class="conteudo">
@@ -49,20 +50,50 @@
 </html>
 
 <script>
+    var nomeUser = document.getElementById("nomeUsuario");
+    var nome = sessionStorage.NOME_USUARIO;
+    nomeUser.innerHTML = nome;
+
     function simular() {
-        var click = 0
         var txt = txtArea.value;
-        txtArea.value = '';
+        var idUsuario = sessionStorage.ID_USUARIO;
 
-        if (txt.length > 20) {
+
+        fetch(`/simulacao/simular/${idUsuario}`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nomeServer: nome,
+                emailServer: email,
+                senhaServer: senha,
+                txtServer: txt,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                if (txt.length > 20) {
             lettering.innerHTML = '<p style="margin-top: 20%; color: #151515;"> ' + txt + '</p>' 
-        } else if (txt.length <= 10) {
+            } else if (txt.length <= 10) {
             lettering.innerHTML = '<p style="margin-top: 45%; color: #151515;">' + txt + '</p>' 
-        } else if (txt.length > 10){
+            } else if (txt.length > 10){
             lettering.innerHTML = '<p style="margin-top: 45%; color: #151515;"> ' + txt + '</p>'
-        }
+            }
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a simuação!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
 
-    
+        return false;
+        txtArea.value = '';
     }
 
     function login() {
