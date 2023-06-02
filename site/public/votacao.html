@@ -8,6 +8,7 @@
     <title>Unique Style</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/votacao.css">
+    <link rel="icon" href="img/logoUS.png">
 </head>
 
 <body>
@@ -72,15 +73,15 @@
                     </div>
                     <div class="coluna" id="coluna2">
                         <select name="select" id="select">
-                            <option value="post01">Post 01</option>
-                            <option value="post02">Post 02</option>
-                            <option value="post03">Post 03</option>
-                            <option value="post04">Post 04</option>
-                            <option value="post05">Post 05</option>
-                            <option value="post06">Post 06</option>
-                            <option value="post07">Post 07</option>
-                            <option value="post08">Post 08</option>
-                            <option value="post09">Post 09</option>
+                            <option value="Post 01">Post 01</option>
+                            <option value="Post 02">Post 02</option>
+                            <option value="Post 03">Post 03</option>
+                            <option value="Post 04">Post 04</option>
+                            <option value="Post 05">Post 05</option>
+                            <option value="Post 06">Post 06</option>
+                            <option value="Post 07">Post 07</option>
+                            <option value="Post 08">Post 08</option>
+                            <option value="Post 09">Post 09</option>
                         </select>
                         <button onclick="votar()">Votar</button>
                         
@@ -98,6 +99,20 @@
     var nome = sessionStorage.NOME_USUARIO;
     nomeUser.innerHTML = nome;
 
+    var click = 0;
+    var vtVoto = [];
+    function votar() {
+        click++;
+        if (click>1) {
+            alert('Você já votou! Obrigada pela sua opinião❤')
+        } else {
+
+            var voto = select.value;
+            vtVoto.push(voto);
+            alert('Você votou no '+ voto)
+        }
+
+    }
 
 
 </script>
