@@ -1,0 +1,35 @@
+.conteudo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+select {
+    width: 30%;
+    margin-top: 15%;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 1%;
+}
+
+button {
+    width: 30%;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: #151515;
+    color: white;
+}
+
+button:hover {
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(249, 83, 255);
+}
+
+#imagem {
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    
+}

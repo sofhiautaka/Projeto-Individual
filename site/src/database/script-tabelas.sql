@@ -14,14 +14,6 @@ CREATE TABLE Post (
 	idPost INT PRIMARY KEY AUTO_INCREMENT
 );
 
-CREATE TABLE Curtida (
-    fkUsuario INT,
-    FOREIGN KEY (fkUsuario) REFERENCES Usuario(id),
-    fkPost INT,
-    FOREIGN KEY (fkPost) REFERENCES Post(idPost),
-    PRIMARY KEY (fkUsuario, fkPost)
-);
-
 CREATE TABLE Simulador (
 	idSimulador INT PRIMARY KEY AUTO_INCREMENT,
     texto VARCHAR(60),
