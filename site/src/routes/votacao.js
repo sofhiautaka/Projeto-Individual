@@ -3,18 +3,16 @@ var router = express.Router();
 
 var votacaoController = require("../controllers/votacaoController");
 
-router.get("/", function (req, res) {
-    votacaoController.testar(req, res);
+router.get("/votar/:idAquario", function (req, res) {
+    votacaoController.buscarUltimosVotos(req, res);
 });
-// router.get("/verVotos", function (req, res) {
-//     votacaoController.verVotos(req, res);
-// });
 
-
-//Recebendo os dados do html e direcionando para a função cadastrar de votacaoController.js
 router.post("/votar", function (req, res) {
     votacaoController.votar(req, res);
 })
 
+// router.get("/tempo-real/:idAquario", function (req, res) {
+//     votosController.buscarvotossEmTempoReal(req, res);
+// })
 
 module.exports = router;

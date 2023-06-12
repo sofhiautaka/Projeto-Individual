@@ -11,7 +11,7 @@ var app = express();
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
 var avisosRouter = require("./src/routes/avisos");
-var medidasRouter = require("./src/routes/medidas");
+var medidasRouter = require("./src/routes/votacao");
 var simulacaoRouter = require("./src/routes/simulacao");
 var votacaoRouter = require("./src/routes/votacao");
 
