@@ -102,6 +102,12 @@
     var nome = sessionStorage.NOME_USUARIO;
     nomeUser.innerHTML = nome;
 
+    
+
+    setInterval(()=>{
+        myChart.destroy();
+        obterDadosGraficos();
+    }, 3000)
     //     const ctx = document.getElementById('myChart');
 
     //     new Chart(ctx, {
@@ -223,12 +229,6 @@
 
     function obterDadosGrafico(idUsuario) {
 
-        // alterarTitulo(idUsuario)
-
-        // if (proximaAtualizacao != undefined) {
-        //     clearTimeout(proximaAtualizacao);
-        // }
-
         fetch(`/votacao/votar/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
@@ -246,7 +246,10 @@
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
     }
-
+    var myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
@@ -301,7 +304,7 @@
         };
 
         // Adicionando gráfico criado em div na tela
-        let myChart = new Chart(
+        myChart = new Chart(
             document.getElementById('myChart'),
             config
         );
@@ -324,7 +327,7 @@
                     console.log(`Dados atuais do gráfico:`);
                     console.log(dados);
 
-                    let avisoCaptura = document.getElementById(`avisoCaptura${idUsuario}`)
+                    // let avisoCaptura = document.getElementById(`avisoCaptura${idUsuario}`)
                     //avisoCaptura.innerHTML = ""
 
 

@@ -3,7 +3,7 @@ var router = express.Router();
 
 var votacaoController = require("../controllers/votacaoController");
 
-router.get("/votar/:idAquario", function (req, res) {
+router.get("/votar/:idUsuario", function (req, res) {
     votacaoController.buscarUltimosVotos(req, res);
 });
 
