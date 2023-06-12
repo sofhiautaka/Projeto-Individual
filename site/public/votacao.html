@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/votacao.css">
     <link rel="icon" href="img/logoUS.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 
@@ -102,9 +103,9 @@
     var nome = sessionStorage.NOME_USUARIO;
     nomeUser.innerHTML = nome;
 
-    
 
-    setInterval(()=>{
+
+    setInterval(() => {
         myChart.destroy();
         obterDadosGraficos();
     }, 3000)
@@ -179,7 +180,12 @@
         }
 
         if (click > 1) {
-            alert('Você já votou! Obrigada pela sua opinião❤')
+            swal({
+                title: "Você só pode votar uma vez!",
+                text: "Obrigada pela sua opinião❤",
+                icon: "warning",
+            });
+            // swal("ERRO!", "Você já votou! Obrigada pela sua opinião❤", "warning");
             erro++;
         }
 
@@ -200,7 +206,8 @@
                 console.log("resposta: ", resposta);
 
                 if (click == 1) {
-                    alert(`Você votou no Post 0${voto}`)
+                    swal(`Você votou no Post 0${voto}!`, "Obrigada por realizar a votação!", "success");
+                    // alert(`Você votou no Post 0${voto}`)
                 } else {
                     throw ("Houve um erro ao tentar realizar a votação!");
                 }
@@ -247,9 +254,9 @@
             });
     }
     var myChart = new Chart(
-            document.getElementById('myChart'),
-            config
-        );
+        document.getElementById('myChart'),
+        config
+    );
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
@@ -276,7 +283,7 @@
         console.log(resposta)
 
 
-        
+
         // labels.push(registro.momento_grafico);
         dados.datasets[0].data.push(resposta[0].voto1);
         dados.datasets[0].data.push(resposta[0].voto2);

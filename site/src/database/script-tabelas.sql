@@ -25,7 +25,7 @@ CREATE TABLE Usuario (
 );
 
 SELECT * FROM Usuario;
-SELECT COUNT(fkPostVotado) FROM Usuario WHERE fkPostVotado = 9;
+SELECT COUNT(fkPostVotado) FROM Usuario group BY fkPostVotado;
 
 
 CREATE TABLE Simulador (
@@ -34,6 +34,16 @@ CREATE TABLE Simulador (
     fkUsuario INT,
     FOREIGN KEY (fkUsuario) REFERENCES Usuario (id)
 );
+SELECT (SELECT Count(*) FROM Usuario where fkPostVotado = 1) voto1,
+(SELECT Count(*) FROM Usuario where fkPostVotado = 2) voto2,
+(SELECT Count(*) FROM Usuario where fkPostVotado = 3) voto3,
+(SELECT Count(*) FROM Usuario where fkPostVotado = 4) voto4,
+(SELECT Count(*) FROM Usuario where fkPostVotado = 5) voto5,
+(SELECT Count(*) FROM Usuario where fkPostVotado = 6) voto6,
+(SELECT Count(*) FROM Usuario where fkPostVotado = 7) voto7,
+(SELECT Count(*) FROM Usuario where fkPostVotado = 8) voto8,
+(SELECT Count(*) FROM Usuario where fkPostVotado = 9) voto9;
+
 
 SELECT texto, id, nome FROM Simulador JOIN Usuario ON fkUsuario = id;
 SELECT LENGTH(texto) 'Caracteres do texto', texto, id, nome FROM Simulador JOIN Usuario ON fkUsuario = id;
