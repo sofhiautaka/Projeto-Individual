@@ -1,99 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Unique Style</title>
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/votacao.css">
-        <link rel="icon" href="img/logoUS.png">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Style</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/votacao.css">
+    <link rel="icon" href="img/logoUS.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    </head>
+</head>
 
-    <body>
-        <div class="header"
-            style="z-index: 100;border-bottom: 1px solid rgb(161, 161, 161, 0.5); box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.25);">
-            <div class="container">
-                <a href="votacao.html"><img src="img/Logo e nome.png" alt="Logo"
-                        style="width: 83%; height: 52.8%; margin-top: 20%;"></a>
-                <ul class="navBarUsuario">
-                    <li><a href="votacao.html">Votação</a></li>
-                    <li><a href="pesquisar.html">Pesquisar</a></li>
-                    <li><a href="simulacao.html">Simulação</a></li>
-                </ul>
-                <div class="perfil">
-                    <div class="boasVindas" style="margin-top: 0.9%;">
-                        <p>Olá, <span id="nomeUsuario">usuário</span>!</p>
-                        <a href="index.html">Logout</a>
-                    </div>
+<body>
+    <div class="header"
+        style="z-index: 100;border-bottom: 1px solid rgb(161, 161, 161, 0.5); box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.25);">
+        <div class="container">
+            <a href="votacao.html"><img src="img/Logo e nome.png" alt="Logo"
+                    style="width: 83%; height: 52.8%; margin-top: 20%;"></a>
+            <ul class="navBarUsuario">
+                <li><a href="votacao.html">Votação</a></li>
+                <li><a href="pesquisar.html">Pesquisar</a></li>
+                <li><a href="simulacao.html">Simulação</a></li>
+            </ul>
+            <div class="perfil">
+                <div class="boasVindas" style="margin-top: 0.9%;">
+                    <p>Olá, <span id="nomeUsuario">usuário</span>!</p>
+                    <a href="index.html">Logout</a>
                 </div>
             </div>
         </div>
-        <div class="conteudo">
-            <div class="imagens">
-                <div class="fileira" id="fileira1">
-                    <div class="coluna">
-                        <img id="post01" src="img/post01.jpeg" alt="">
-                        <p>Post 01</p>
-                    </div>
-                    <div class="coluna">
-                        <img id="post02" src="img/post02.jpeg" alt="">
-                        <p>Post 02</p>
-                    </div>
-                    <div class="coluna">
-                        <img id="post03" src="img/post03.jpeg" alt="">
-                        <p>Post 03</p>
-                    </div>
-                    <div class="coluna">
-                        <img id="post04" src="img/post04.jpeg" alt="">
-                        <p>Post 04</p>
-                    </div>
-                    <div class="coluna">
-                        <img id="post05" src="img/post05.jpeg" alt="">
-                        <p>Post 05</p>
-                    </div>
+    </div>
+    <div class="conteudo">
+        <div class="imagens">
+            <div class="fileira" id="fileira1">
+                <div class="coluna">
+                    <img id="post01" src="img/post01.jpeg" alt="">
+                    <p>Post 01</p>
                 </div>
-                <div class="fileira" id="fileira2">
+                <div class="coluna">
+                    <img id="post02" src="img/post02.jpeg" alt="">
+                    <p>Post 02</p>
+                </div>
+                <div class="coluna">
+                    <img id="post03" src="img/post03.jpeg" alt="">
+                    <p>Post 03</p>
+                </div>
+                <div class="coluna">
+                    <img id="post04" src="img/post04.jpeg" alt="">
+                    <p>Post 04</p>
+                </div>
+                <div class="coluna">
+                    <img id="post05" src="img/post05.jpeg" alt="">
+                    <p>Post 05</p>
+                </div>
+            </div>
+            <div class="fileira" id="fileira2">
 
-                    <div class="coluna">
-                        <img id="post06" src="img/post06.jpeg" alt="">
-                        <p>Post 06</p>
-                    </div>
-                    <div class="coluna">
-                        <img id="post07" src="img/post07.jpeg" alt="">
-                        <p>Post 07</p>
-                    </div>
-                    <div class="coluna">
-                        <img id="post08" src="img/post08.jpeg" alt="">
-                        <p>Post 08</p>
-                    </div>
-                    <div class="coluna">
-                        <img id="post09" src="img/post09.jpeg" alt="">
-                        <p>Post 09</p>
-                    </div>
-                    <div class="coluna" id="coluna2">
-                        <select name="select" id="select">
-                            <option value="Post 01">Post 01</option>
-                            <option value="Post 02">Post 02</option>
-                            <option value="Post 03">Post 03</option>
-                            <option value="Post 04">Post 04</option>
-                            <option value="Post 05">Post 05</option>
-                            <option value="Post 06">Post 06</option>
-                            <option value="Post 07">Post 07</option>
-                            <option value="Post 08">Post 08</option>
-                            <option value="Post 09">Post 09</option>
-                        </select>
-                        <button onclick="votar()">Votar</button>
-                    </div>
+                <div class="coluna">
+                    <img id="post06" src="img/post06.jpeg" alt="">
+                    <p>Post 06</p>
+                </div>
+                <div class="coluna">
+                    <img id="post07" src="img/post07.jpeg" alt="">
+                    <p>Post 07</p>
+                </div>
+                <div class="coluna">
+                    <img id="post08" src="img/post08.jpeg" alt="">
+                    <p>Post 08</p>
+                </div>
+                <div class="coluna">
+                    <img id="post09" src="img/post09.jpeg" alt="">
+                    <p>Post 09</p>
+                </div>
+                <div class="coluna" id="coluna2">
+                    <select name="select" id="select">
+                        <option value="Post 01">Post 01</option>
+                        <option value="Post 02">Post 02</option>
+                        <option value="Post 03">Post 03</option>
+                        <option value="Post 04">Post 04</option>
+                        <option value="Post 05">Post 05</option>
+                        <option value="Post 06">Post 06</option>
+                        <option value="Post 07">Post 07</option>
+                        <option value="Post 08">Post 08</option>
+                        <option value="Post 09">Post 09</option>
+                    </select>
+                    <button onclick="votar()">Votar</button>
                 </div>
             </div>
-            <div class="grafico">
-                <canvas id="myChart"></canvas>
-            </div>
-    </body>
+        </div>
+        <div class="grafico">
+            <canvas id="myChart"></canvas>
+        </div>
+</body>
 
 </html>
 
@@ -102,48 +102,48 @@
     var nome = sessionStorage.NOME_USUARIO;
     nomeUser.innerHTML = nome;
 
-//     const ctx = document.getElementById('myChart');
+    //     const ctx = document.getElementById('myChart');
 
-//     new Chart(ctx, {
-//         type: 'bar',
-//         data: {
-//         labels: ['Post 01', 'Post 02', 'Post 03', 'Post 04', 'Post 05', 'Post 06', 'Post 07', 'Post 08', 'Post 09'],
-//     datasets: [{
-//       label: 'Quantidade de votos',
-//       data: [2, 1, 1, 2, 6, 3, 2, 4, 3],
-//       backgroundColor: [
-//       '#000',
-//       '#000',
-//       '#000',
-//       '#000',
-//       '#000',
-//       '#000',
-//       '#000',
-//       '#000',
-//       '#000'
-//     ],
-//     borderColor: [
-//       '#000',
-//       '#000',
-//       '#000',
-//       '#000',
-//       '#000',
-//       '#000',
-//       '#000',
-//       '#000',
-//       '#000'
-//     ],
-//       borderWidth: 1
-//     }]
-//   },
-//   options: {
-//     scales: {
-//       y: {
-//         beginAtZero: true
-//       }
-//     }
-//   }
-// });
+    //     new Chart(ctx, {
+    //         type: 'bar',
+    //         data: {
+    //         labels: ['Post 01', 'Post 02', 'Post 03', 'Post 04', 'Post 05', 'Post 06', 'Post 07', 'Post 08', 'Post 09'],
+    //     datasets: [{
+    //       label: 'Quantidade de votos',
+    //       data: [2, 1, 1, 2, 6, 3, 2, 4, 3],
+    //       backgroundColor: [
+    //       '#000',
+    //       '#000',
+    //       '#000',
+    //       '#000',
+    //       '#000',
+    //       '#000',
+    //       '#000',
+    //       '#000',
+    //       '#000'
+    //     ],
+    //     borderColor: [
+    //       '#000',
+    //       '#000',
+    //       '#000',
+    //       '#000',
+    //       '#000',
+    //       '#000',
+    //       '#000',
+    //       '#000',
+    //       '#000'
+    //     ],
+    //       borderWidth: 1
+    //     }]
+    //   },
+    //   options: {
+    //     scales: {
+    //       y: {
+    //         beginAtZero: true
+    //       }
+    //     }
+    //   }
+    // });
 
     var click = 0;
     function votar() {
@@ -210,15 +210,15 @@
     window.onload = obterDadosGraficos();
 
     function obterDadosGraficos() {
-        obterDadosGrafico(1),
-        obterDadosGrafico(2),
-        obterDadosGrafico(3),
-        obterDadosGrafico(4),
-        obterDadosGrafico(5),
-        obterDadosGrafico(6),
-        obterDadosGrafico(7),
-        obterDadosGrafico(8),
-        obterDadosGrafico(9)
+        obterDadosGrafico(1)
+        // obterDadosGrafico(2),
+        // obterDadosGrafico(3),
+        // obterDadosGrafico(4),
+        // obterDadosGrafico(5),
+        // obterDadosGrafico(6),
+        // obterDadosGrafico(7),
+        // obterDadosGrafico(8),
+        // obterDadosGrafico(9)
     }
 
     function obterDadosGrafico(idUsuario) {
@@ -236,7 +236,7 @@
                     resposta.reverse();
 
                     plotarGrafico(resposta, idUsuario);
-                    
+
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -245,12 +245,12 @@
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
-        }
+    }
 
-        // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
-        // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
-        // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-        function plotarGrafico(resposta, idUsuario) {
+    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    function plotarGrafico(resposta, idUsuario) {
 
         console.log('iniciando plotagem do gráfico...');
 
@@ -259,7 +259,7 @@
 
         // Criando estrutura para plotar gráfico - dados
         var dados = {
-            labels: ['Post 01', 'Post 02', 'Post 03', 'Post 04', 'Post 05', 'Post 06', 'Post 07', 'Post 08', 'Post 09'],
+            labels: ['Post 01', 'Post 02', 'Post 03', 'Post 04', 'Post 05', 'Post 06', 'Post 07', 'Post 08', 'Post 9'],
             datasets: [{
                 label: 'Quantidade de votos',
                 data: [],
@@ -272,20 +272,19 @@
         console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
         console.log(resposta)
 
-        // Inserindo valores recebidos em estrutura para plotar o gráfico
-        for (i = 0; i < resposta.length; i++) {
-            var registro = resposta[i];
-            // labels.push(registro.momento_grafico);
-            dados.datasets[0].data.push(registro.Qtd_de_votos);
-            // dados.datasets[1].data.push(registro.Qtd_de_votos2);
-            // dados.datasets[2].data.push(registro.Qtd_de_votos3);
-            // dados.datasets[3].data.push(registro.Qtd_de_votos4);
-            // dados.datasets[4].data.push(registro.Qtd_de_votos5);
-            // dados.datasets[5].data.push(registro.Qtd_de_votos6);
-            // dados.datasets[6].data.push(registro.Qtd_de_votos7);
-            // dados.datasets[7].data.push(registro.Qtd_de_votos8);
-            // dados.datasets[8].data.push(registro.Qtd_de_votos9);
-        }
+
+        
+        // labels.push(registro.momento_grafico);
+        dados.datasets[0].data.push(resposta[0].voto1);
+        dados.datasets[0].data.push(resposta[0].voto2);
+        dados.datasets[0].data.push(resposta[0].voto3);
+        dados.datasets[0].data.push(resposta[0].voto4);
+        dados.datasets[0].data.push(resposta[0].voto5);
+        dados.datasets[0].data.push(resposta[0].voto6);
+        dados.datasets[0].data.push(resposta[0].voto7);
+        dados.datasets[0].data.push(resposta[0].voto8);
+        dados.datasets[0].data.push(resposta[0].voto9);
+
 
         console.log('----------------------------------------------')
         console.log('O gráfico será plotado com os respectivos valores:')
@@ -309,61 +308,56 @@
         myChart.update();
 
         setTimeout(() => atualizarGrafico(idUsuario, dados, myChart), 200);
-        }
-
-        function atualizarGrafico(idAquario, dados, myChart) {
-
-
-
-fetch(`/votacao/votar/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
-    if (response.ok) {
-        response.json().then(function (novoRegistro) {
-
-            obterdados(idUsuario);
-            // alertar(novoRegistro, idUsuario);
-            console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
-            console.log(`Dados atuais do gráfico:`);
-            console.log(dados);
-
-            let avisoCaptura = document.getElementById(`avisoCaptura${idUsuario}`)
-            avisoCaptura.innerHTML = ""
-
-
-            if (novoRegistro[0].momento_grafico == dados.labels[dados.labels.length - 1]) {
-                console.log("---------------------------------------------------------------")
-                console.log("Como não há dados novos para captura, o gráfico não atualizará.")
-                avisoCaptura.innerHTML = "<i class='fa-solid fa-triangle-exclamation'></i> Foi trazido o dado mais atual capturado pelo sensor. <br> Como não há dados novos a exibir, o gráfico não atualizará."
-                console.log("Horário do novo dado capturado:")
-                console.log(novoRegistro[0].momento_grafico)
-                console.log("Horário do último dado capturado:")
-                console.log(dados.labels[dados.labels.length - 1])
-                console.log("---------------------------------------------------------------")
-            } else {
-                // tirando e colocando valores no gráfico
-                dados.labels.shift(); // apagar o primeiro
-                dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
-
-                dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-                dados.datasets[0].data.push(novoRegistro[0].Qtd_de_votos); // incluir uma nova medida de umidade
-
-                // dados.datasets[1].data.shift(); 
-                // dados.datasets[1].data.push(novoRegistro[0].temperatura); 
-
-                myChart.update();
-            }
-
-            // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-            proximaAtualizacao = setTimeout(() => atualizarGrafico(idUsuario, dados, myChart), 200);
-        });
-    } else {
-        console.error('Nenhum dado encontrado ou erro na API');
-        // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-        proximaAtualizacao = setTimeout(() => atualizarGrafico(idUsuario, dados, myChart), 200);
     }
-})
-    .catch(function (error) {
-        console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-    });
 
-}
+    function atualizarGrafico(idAquario, dados, myChart) {
+
+
+        idUsuario = 0;
+        fetch(`/votacao/votar/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (novoRegistro) {
+
+                    //obterdados(idUsuario);
+                    // alertar(novoRegistro, idUsuario);
+                    console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
+                    console.log(`Dados atuais do gráfico:`);
+                    console.log(dados);
+
+                    let avisoCaptura = document.getElementById(`avisoCaptura${idUsuario}`)
+                    //avisoCaptura.innerHTML = ""
+
+
+                    if (novoRegistro[0].momento_grafico == dados.labels[dados.labels.length - 1]) {
+                        console.log("---------------------------------------------------------------")
+                        console.log("Como não há dados novos para captura, o gráfico não atualizará.")
+                        //avisoCaptura.innerHTML = "<i class='fa-solid fa-triangle-exclamation'></i> Foi trazido o dado mais atual capturado pelo sensor. <br> Como não há dados novos a exibir, o gráfico não atualizará."
+                        console.log("Horário do novo dado capturado:")
+                        console.log(novoRegistro[0].momento_grafico)
+                        console.log("Horário do último dado capturado:")
+                        console.log(dados.labels[dados.labels.length - 1])
+                        console.log("---------------------------------------------------------------")
+                    } else {
+                        // tirando e colocando valores no gráfico
+
+                        // dados.datasets[1].data.shift(); 
+                        // dados.datasets[1].data.push(novoRegistro[0].temperatura); 
+
+                        myChart.update();
+                    }
+
+                    // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idUsuario, dados, myChart), 2000);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+                // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(idUsuario, dados, myChart), 2000);
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
 </script>
