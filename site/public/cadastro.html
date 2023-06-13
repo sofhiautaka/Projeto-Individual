@@ -34,7 +34,7 @@
     <div class="conteudo">
         <div class="caixa">
             <div class="titulo">
-                <h3 style="margin-left: 48.6%;">CADASTRO</h3>
+                <h3 style="margin-left: 48.9%;">CADASTRO</h3>
             </div>
             <div class="camposCadastro">
                 <input id="iptNome" placeholder="nome">
@@ -110,25 +110,33 @@
         var confirmacaoSenha = iptConfirmacaoSenha.value;
 
         if (nome == '' && email == '' && senha == '' && confirmacaoSenha == '') {
-            alert('Todos os campos devem ser preenchidos.');
+            swal("Erro!", "Todos os campos devem ser preenchidos.");
             erro++;
         } else {
 
             if (nome.length <= 1) {
-                alert('O nome deve possuir pelo menos 1 caractere');
+                swal("Erro!", "O nome deve possuir pelo menos 1 caractere");
+
+                // alert('O nome deve possuir pelo menos 1 caractere');
                 erro++;
             }
             if (email.includes('@') && email.includes('.')) {
             } else {
-                alert('O email deve conter @ e .');
+                swal("Erro!", "O email deve conter @ e .");
+                
+                // alert('O email deve conter @ e .');
                 erro++;
             }
             if (senha.length <= 5) {
-                alert('A senha deve possuir pelo menos 6 caracteres');
+                swal("Erro!", "A senha deve possuir pelo menos 6 caracteres");
+                
+                // alert('A senha deve possuir pelo menos 6 caracteres');
                 erro++;
             }
             if (senha != confirmacaoSenha) {
-                alert('As senhas não estão iguais!');
+                swal("Erro!", "As senhas não estão iguais!");
+
+                // alert('As senhas não estão iguais!');
             }
         }
 
@@ -154,7 +162,7 @@
                 if (resposta.ok) {
                     // alert('Cadastro realizado com sucesso!')
 
-                    swal("Cadastro realizado com sucesso!", "", "success");
+                    swal("Cadastro realizado com sucesso!", "Você será redirecionado para a tela de Login");
                     
                     setTimeout(() => {
                         window.location.href = "login.html";
@@ -174,7 +182,7 @@
     function copiarEmail() {
         navigator.clipboard.writeText("sofhiautaka@gmail.com")
             .then(() => {
-                alert("O email foi copiado para sua área de transferência!");
+                swal("O email foi copiado para sua área de transferência!");
             })
     }
 
